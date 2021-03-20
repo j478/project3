@@ -1,2 +1,5 @@
 # project3
-Team 6 Project 3
+A Flask web app to extract text from images.
+
+# install
+Using Python 3.7, run`pip install -r requirements.txt` in the root folder to install the needed dependencies.
