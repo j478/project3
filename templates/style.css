@@ -1,6 +1,6 @@
 * {
-	margin: 0;
-	padding: 0;
+	margin-left: 0;
+	margin-right: 0;
 }
 
 html, body {
@@ -15,8 +15,22 @@ body {
 
 .interaction {
 	position: absolute;
-	top: 50px;
-	left: 50px;
+	left: 50%;
+	top: 50%;
+	margin-left: -310px;
+	margin-top: -150px;
+}
+
+.background {
+	display: flex;
+	position: absolute;
+	justify-content: center;
+	height: 300px;
+	width: 300px;
+	border-style: solid;
+	border-width: thin;
+	border-color: black;
+	background-color: #eeeeee;
 }
 
 #image {
@@ -31,14 +45,11 @@ body {
 	top: 310px;
 }
 
-#background {
-	display: flex;
+#text_field {
 	position: absolute;
-	justify-content: center;
-	height: 300px;
-	width: 300px;
-	border-style: solid;
-	border-width: thin;
-	border-color: black;
-	background-color: #eeeeee;
+	left: 320px;
+}
+
+#text {
+	margin: 20px 20px 20px 20px;
 }
