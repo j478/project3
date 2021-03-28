@@ -1,0 +1,11 @@
+Dilation and kernel:
+https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_morphological_ops/py_morphological_ops.html
+
+threshold:
+https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_thresholding/py_thresholding.html
+
+find contours:
+https://pythonexamples.org/python-opencv-cv2-find-contours-in-image/
+
+tutorials:
+https://www.youtube.com/watch?v=6DjFscX4I_c
