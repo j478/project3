@@ -34,6 +34,12 @@ body {
 	background-color: #eeeeee;
 }
 
+#submit {
+	position: absolute;
+	left: 283px;
+	top: 350px;
+}
+
 #image {
 	position: absolute;
 	height: 250px;
