@@ -24,5 +24,5 @@ document.querySelector('#submit').addEventListener('click', () => {
         }
       };
       xhttp.open("GET", url, true);
-      xhttp.send();
+      xhttp.send(form_data);
 });
