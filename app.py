@@ -18,7 +18,7 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/process')
+@app.route('/process', methods=['POST'])
 def process_image():
     """
     Process a file upload to our server.
