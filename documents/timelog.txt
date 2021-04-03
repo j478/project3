@@ -4,21 +4,21 @@ Estimation:
 2.5 hr group meeting + 28 hr individual work = 30.5 hr total
 
 Estimation Explanation:
-Our group did a bit of researching before doing this project. Most of the videos are simple and straight forward. However, take into consideration that handwriting OCR requires machine leaning, we estimated that this project will take quite a bit of research. So we estimated that this project will take around the same amount of time as project 2. 
+Our group did a bit of researching before doing this project. Most of the videos are simple and straight forward. However, take into consideration that handwriting OCR requires machine leaning, we estimated that this project will take quite a bit of research. So we estimated that this project will take around the same amount of time as project 2.
 
 Actual Time Log
 
 KL:
 3/17 -- 1 hr OCR research
 3/19 -- 1 hr Handwriting OCR research
-3/28 -- 8 hr Handwriting OCR research and Code Writing 
+3/28 -- 8 hr Handwriting OCR research and Code Writing
 3/29 -- 2 hr Handwriting OCR research and Code Writing
 
 BL:
 3/17 -- 0.5 hr researching tesseract
 3/25 -- 1.5 hr researching, tutorials
 3/26 -- 2 hr code writing
-3/27 -- 1 hr code writing 
+3/27 -- 1 hr code writing
 4/2 -- 1 hr documentation+revising
 4/2-3--3 hr going over various manipulations
 
@@ -27,6 +27,9 @@ BL:
 AJ:
 
 AG:
+3/18 -- 0.5 hr implementing Flask boilerplate
+3/20 -- 1 hr implementing process endpoint
+4/3 -- 1 hr implementing text display
 
 JD:
 3/17 -- 1 hr Researching tesseract.js
