@@ -11,6 +11,7 @@ html, body {
 body {
     overflow: hidden;
     padding: 20px;
+	background-color: #f8f8ff;
 }
 
 .interaction {
@@ -31,6 +32,12 @@ body {
 	border-width: thin;
 	border-color: black;
 	background-color: #eeeeee;
+}
+
+#submit {
+	position: absolute;
+	left: 283px;
+	top: 350px;
 }
 
 #image {

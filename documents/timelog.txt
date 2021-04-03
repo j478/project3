@@ -15,12 +15,24 @@ KL:
 3/29 -- 2 hr Handwriting OCR research and Code Writing
 
 BL:
+3/17 -- 0.5 hr researching tesseract
+3/25 -- 1.5 hr researching, tutorials
+3/26 -- 2 hr code writing
+3/27 -- 1 hr code writing 
+4/2 -- 1 hr documentation+revising
+4/2-3--3 hr going over various manipulations
+
+
 
 AJ:
 
 AG:
 
 JD:
+3/17 -- 1 hr Researching tesseract.js
+3/19 -- 1.5 hr Beginning of front-end setup
+3/22 -- 3 hr Researching ajax and Flask
+3/25 -- 1 hr Finished basic front-end setup
 
 Group:
 3/17 -- 0.5 hr
