@@ -23,4 +23,6 @@ def ocr(filename):
 
 
 if __name__ == '__main__':
-    print(ocr('sample.jpg'))
+    print (ocr('sample.jpg'))
+    print('\n')
+    print(ocr('handwritten.jpg'))
