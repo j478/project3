@@ -45,7 +45,7 @@ def process_image():
 def file_good(file):
     if file.filename == '':
         return False
-    elif file.filename not in ALLOWED_EXTENSIONS:
+    elif file.filename.split('.')[1] not in ALLOWED_EXTENSIONS:
         return False
     else:
         return True
