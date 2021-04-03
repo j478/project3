@@ -13,11 +13,23 @@ document.querySelector('#submit').addEventListener('click', () => {
 	let xttp = new XMLHttpRequest();
 	xttp.onreadystatechange = function() {
         if (this.readyState === 4 && this.status === 200) {
-          response = this.response;
-          console.log(response);
+          console.log(this.response);
+          parseResponseJson(JSON.parse(this.response));
         }
       };
 	xttp.open("POST", "/process");
-	console.log("LOL IM RUNNING");
 	xttp.send(form_data);
 });
+
+function parseResponseJson(data) {
+    if(data['error_msg'] === '') {
+        updateText(data['img_text'])
+    } else {
+        updateText('Error: ' + data['error_msg']);
+    }
+}
+
+function updateText(text) {
+    let text_box = document.getElementById('text');
+    text_box.innerText = text;
+}
