@@ -15,6 +15,13 @@ KL:
 3/29 -- 2 hr Handwriting OCR research and Code Writing
 
 BL:
+3/17 -- 0.5 hr researching tesseract
+3/25 -- 1.5 hr researching, tutorials
+3/26 -- 2 hr code writing
+3/27 -- 1 hr code writing 
+4/2 -- 1 hr documentation+revising
+
+
 
 AJ:
 

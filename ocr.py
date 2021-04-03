@@ -17,8 +17,7 @@ def ocr(filename):
     for p in contours:
         x, y, w, h = cv2.boundingRect(p)
         rect = cv2.rectangle(img, (x, y), (x + w, y + h), 0, 2)
-        crop = img[y:y + h, x:x + w]
-        text = pytesseract.image_to_string(crop)
+        text = pytesseract.image_to_string(rect)
 
     return text
 
