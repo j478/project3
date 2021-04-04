@@ -25,6 +25,10 @@ BL:
 
 
 AJ:
+3/29 -- 2 hr researching ajax and xttprequest objects
+4/2 -- 1 hr coding xttp request
+4/2-- 0.5 hr bug fixes
+4/4 -- 1 hr testing
 
 AG:
 
