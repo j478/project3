@@ -33,6 +33,8 @@ JD:
 3/19 -- 1.5 hr Beginning of front-end setup
 3/22 -- 3 hr Researching ajax and Flask
 3/25 -- 1 hr Finished basic front-end setup
+3/28 -- 2 hr Finished Ajax request setup
+4/2 -- 1 hr Debugging
 
 Group:
 3/17 -- 0.5 hr
