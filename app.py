@@ -69,8 +69,6 @@ def file_good(file):
     if file.filename == '':
         return False
     elif file.filename.split('.')[len(file.filename.split('.'))-1].lower() not in ALLOWED_EXTENSIONS:
-        print(file.filename)
-        print(file.filename.split('.')[1].lower())
         return False
     else:
         return True
