@@ -10,3 +10,7 @@ https://pythonexamples.org/python-opencv-cv2-find-contours-in-image/
 tutorials:
 https://www.youtube.com/watch?v=6DjFscX4I_c
 https://stackabuse.com/pytesseract-simple-python-optical-character-recognition/
+
+Ajax:
+https://coderwall.com/p/cjinag/upload-a-image-using-ajax-and-formdata
+https://www.w3schools.com/xml/
