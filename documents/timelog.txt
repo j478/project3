@@ -42,6 +42,7 @@ JD:
 3/25 -- 1 hr Finished basic front-end setup
 3/28 -- 2 hr Finished Ajax request setup
 4/2 -- 1 hr Debugging
+Total: 9.5 hr
 
 Group:
 3/17 -- 0.5 hr
