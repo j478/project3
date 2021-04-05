@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request, jsonify
 from ocr import ocr
+from werkzeug.utils import secure_filename
+import os
 
 app = Flask(__name__,
             template_folder='templates',
@@ -7,6 +9,8 @@ app = Flask(__name__,
             static_url_path='/static')
 
 ALLOWED_EXTENSIONS = {'pdf', 'png', 'jpg', 'jpeg', 'gif'}
+UPLOAD_FOLDER = 'static/img/uploaded'
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 
 @app.route('/')
@@ -31,7 +35,8 @@ def process_image():
 
     file = request.files['file']
     if file_good(file):
-        img_text = ocr(file.filename)
+        path = upload(file)
+        img_text = ocr(path)
 
         return jsonify(success=True,
                        error_msg="",
@@ -42,10 +47,30 @@ def process_image():
                        img_text="")
 
 
+def upload(file):
+    """
+    Upload file to server.
+    :param file: file.
+    :return: relative path in /uploaded to upload on server.
+    """
+    if not os.path.isdir(app.config['UPLOAD_FOLDER']):
+        os.mkdir(app.config['UPLOAD_FOLDER'])
+
+    filename = secure_filename(file.filename)
+    file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+
+    print(os.path.join(app.config['UPLOAD_FOLDER'], file.filename))
+    print(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+
+    return os.path.join(app.config['UPLOAD_FOLDER'], filename)
+
+
 def file_good(file):
     if file.filename == '':
         return False
-    elif file.filename.split('.')[1] not in ALLOWED_EXTENSIONS:
+    elif file.filename.split('.')[len(file.filename.split('.'))-1].lower() not in ALLOWED_EXTENSIONS:
+        print(file.filename)
+        print(file.filename.split('.')[1].lower())
         return False
     else:
         return True
