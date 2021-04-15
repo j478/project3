@@ -8,7 +8,7 @@ app = Flask(__name__,
             static_folder='static',
             static_url_path='/static')
 
-ALLOWED_EXTENSIONS = {'pdf', 'png', 'jpg', 'jpeg', 'gif'}
+ALLOWED_EXTENSIONS = {'pdf', 'png', 'jpg', 'jpeg', 'gif', 'PDF', 'PNG', 'JPG', 'JPEG', 'GIF'}
 UPLOAD_FOLDER = 'static/img/uploaded'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
@@ -54,7 +54,7 @@ def upload(file):
     :return: relative path in /uploaded to upload on server.
     """
     if not os.path.isdir(app.config['UPLOAD_FOLDER']):
-        os.mkdir(app.config['UPLOAD_FOLDER'])
+        os.makedirs(app.config['UPLOAD_FOLDER'])
 
     filename = secure_filename(file.filename)
     file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
