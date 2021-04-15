@@ -2,6 +2,7 @@ import cv2
 import pytesseract
 import numpy as np
 import os
+import re
 
 TESSERACT_PATH = 'TESSDATA_PREFIX'
 
@@ -25,6 +26,14 @@ def ocr(filename):
         rect = cv2.rectangle(img, (x, y), (x + w, y + h), 0, 2)
         crop=img[y:y+h,x:x+w]
         text = pytesseract.image_to_string(crop)
+
+    return trim_text(text)
+
+
+def trim_text(text):
+    text = re.sub('\n +', '', text)
+    text = re.sub('\n+', '\n', text)
+    print(text)
 
     return text
 
