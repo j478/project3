@@ -34,6 +34,8 @@ AG:
 3/18 -- 0.5 hr implementing Flask boilerplate
 3/20 -- 1 hr implementing process endpoint
 4/3 -- 1 hr implementing text display
+4/15 -- 1 hr adding \n trimming, fixing ui
+4/18 -- 1 hr adding Bulma
 
 JD:
 3/17 -- 1 hr Researching tesseract.js
