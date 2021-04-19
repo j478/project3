@@ -1,3 +1,8 @@
+// settings is the object that contains all of the 'settings' for the translate API. It is passed into the ajax request(jquery).
+// request is a function that sends the ajax request as well as a callback that prints the object to the console.
+// according to the translate api webpage, we have 500 translations per month, however I have seen many different numbers so far,
+// so test this function sparingly
+
 let settings = {
   "async": true,
   "crossDomain": true,
@@ -10,8 +15,8 @@ let settings = {
   },
   "data": {
     "source": "en",
-    "q": "Contact Form | Name | Contact Number | Email",
-    "target": ""
+    "q": "Hello, World!",
+    "target": "es"
   }
 
 }
