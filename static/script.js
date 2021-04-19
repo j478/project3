@@ -1,5 +1,4 @@
 let file = "";
-let response = "";
 
 document.querySelector('#add_file').addEventListener('change', () => {
 	file = document.querySelector('#add_file').files[0];
