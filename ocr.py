@@ -44,3 +44,5 @@ if __name__ == '__main__':
     print(ocr('sample.jpg'))
     print('Handwritten:')
     print(ocr('handwritten.jpg'))
+    print('Printed:')
+    print(ocr('printed.jpg'))
