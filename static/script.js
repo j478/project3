@@ -1,4 +1,7 @@
 let file = "";
+let loading = document.getElementById('progress');
+let text_box = document.getElementById('text');
+loading.style.display = 'none';
 
 document.querySelector('#add_file').addEventListener('change', () => {
 	file = document.querySelector('#add_file').files[0];
@@ -7,6 +10,9 @@ document.querySelector('#add_file').addEventListener('change', () => {
 });
 
 document.querySelector('#submit').addEventListener('click', () => {
+    text_box.style.display = 'none';
+    loading.style.display = 'block';
+
 	let form_data = new FormData();
 	form_data.append("file", file);
 
@@ -30,6 +36,7 @@ function parseResponseJson(data) {
 }
 
 function updateText(text) {
-    let text_box = document.getElementById('text');
     text_box.innerText = text;
+    text_box.style.display = 'block';
+    loading.style.display = 'none';
 }
