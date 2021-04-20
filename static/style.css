@@ -3,8 +3,9 @@ body {
 	background-color: #f8f8ff;
 }
 
-.text_box {
-	overflow: auto;
+#text-box {
+	max-height: 636px;
+	overflow: scroll;
 }
 
 .column {
