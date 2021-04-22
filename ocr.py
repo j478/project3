@@ -31,7 +31,7 @@ def ocr(filename):
         rect = cv2.rectangle(img, (x, y), (x + w, y + h), 0, 2)
         crop=img[y:y+h,x:x+w]
         text = pytesseract.image_to_string(crop)
-    pdf(trim_text(text))
+    pdf(text)
     return trim_text(text)
 
 
