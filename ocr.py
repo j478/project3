@@ -59,3 +59,4 @@ def translate_text(t, d_lang):
     trans = translator.translate(t, dest = d_lang)
     return(trans.text)
 
+print(translate_text("土豆和马铃薯", "en"))
