@@ -6,7 +6,7 @@ import re
 from googletrans import Translator
 
 TESSERACT_PATH = 'TESSDATA_PREFIX'
-translater = Translator()
+translator = Translator()
 
 def ocr(filename):
     """
