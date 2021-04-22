@@ -3,10 +3,14 @@ import pytesseract
 import numpy as np
 import os
 import re
+from fpdf import FPDF
+'''
 from googletrans import Translator
-
+'''
 TESSERACT_PATH = 'TESSDATA_PREFIX'
+'''
 translator = Translator()
+'''
 
 def ocr(filename):
     """
@@ -27,7 +31,7 @@ def ocr(filename):
         rect = cv2.rectangle(img, (x, y), (x + w, y + h), 0, 2)
         crop=img[y:y+h,x:x+w]
         text = pytesseract.image_to_string(crop)
-
+    pdf(trim_text(text))
     return trim_text(text)
 
 
@@ -38,6 +42,13 @@ def trim_text(text):
 
     return text
 
+def pdf(text):
+    pdf=FPDF()
+    pdf.add_page()
+    pdf.set_font("Arial", size=12)
+    pdf.multi_cell(0, 10, txt=text)
+    pdf.output("text.pdf")
+
 
 if __name__ == '__main__':
     os.chdir('samples/')
@@ -46,7 +57,8 @@ if __name__ == '__main__':
     print('Handwritten:')
     print(ocr('handwritten.jpg'))
 
-    
+'''   
 def translate_text(text, s_lang, d_lang)
     trans = translator.translate(text, src = s_lang, dest = d_lang)
     return(trans)
+'''
