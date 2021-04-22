@@ -46,6 +46,7 @@ if __name__ == '__main__':
     print('Handwritten:')
     print(ocr('handwritten.jpg'))
 
+    
 def translate_text(text, s_lang, d_lang)
     trans = translator.translate(text, src = s_lang, dest = d_lang)
     return(trans)
