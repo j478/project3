@@ -3,9 +3,10 @@ import pytesseract
 import numpy as np
 import os
 import re
+from googletrans import Translator
 
 TESSERACT_PATH = 'TESSDATA_PREFIX'
-
+translater = Translator()
 
 def ocr(filename):
     """
@@ -44,3 +45,7 @@ if __name__ == '__main__':
     print(ocr('sample.jpg'))
     print('Handwritten:')
     print(ocr('handwritten.jpg'))
+
+def translate_text(text, s_lang, d_lang)
+    trans = translator.translate(text, src = s_lang, dest = d_lang)
+    reuturn(trans)
