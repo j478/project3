@@ -58,7 +58,7 @@ if __name__ == '__main__':
     print(ocr('handwritten.jpg'))
 
 '''   
-def translate_text(text, d_lang)
-    trans = translator.translate(text, dest = d_lang)
+def translate_text(t, d_lang)
+    trans = translator.translate(t, dest = d_lang)
     return(trans.text)
 '''
