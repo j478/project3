@@ -8,9 +8,6 @@ from fpdf import FPDF
 from googletrans import Translator
 '''
 TESSERACT_PATH = 'TESSDATA_PREFIX'
-'''
-translator = Translator()
-'''
 
 def ocr(filename):
     """
@@ -58,7 +55,10 @@ if __name__ == '__main__':
     print(ocr('handwritten.jpg'))
 
 '''   
-def translate_text(t, d_lang)
+def translate_text(t, d_lang):
+    translator = Translator()
     trans = translator.translate(t, dest = d_lang)
     return(trans.text)
+
+print(translate_text("你好吗", "en"))
 '''
