@@ -48,4 +48,4 @@ if __name__ == '__main__':
 
 def translate_text(text, s_lang, d_lang)
     trans = translator.translate(text, src = s_lang, dest = d_lang)
-    reuturn(trans)
+    return(trans)
