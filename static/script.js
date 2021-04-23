@@ -40,3 +40,9 @@ function updateText(text) {
     text_box.style.display = 'block';
     loading.style.display = 'none';
 }
+function translate(){
+	let language = document.getElementbyId(language);
+	let text=text_box.value;
+	settings.data.target=language.value;
+	settings.data.q=text;
+}
