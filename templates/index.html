@@ -67,11 +67,24 @@
                 <div class="columns">
                     <div class="column">
                         <button id="submit" class="button is-large">Submit</button>
+						<button id="translate" class="button is-large" onclick="translate()"> Translate</button>
+						<select name="language" id="language">
+							<option value="es">Spanish</option>
+							<option value="fr">French</option>
+							<option value="de">German</option>
+							<option value="nl">Dutch</option>
+							<option value="zh-TW">Chinese</option>
+							<option value="is">Icelandic</option>
+						</select>
+						
                     </div>
                 </div>
             </div>
         </div>
     </section>
+	<label for="language">Choose a language:</label>
+
+	
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 	<script src="{{ url_for('static', filename='translate.js') }}"></script>
 	<script src="{{ url_for('static', filename='script.js') }}"></script>
