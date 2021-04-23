@@ -43,6 +43,6 @@ function updateText(text) {
 function translate(){
 	let language = document.getElementbyId(language);
 	let text=text_box.value;
-	settings.data.target=language.value;
+	settings.data.target=language.selectedIndex;
 	settings.data.q=text;
 }
