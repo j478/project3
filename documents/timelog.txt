@@ -1,12 +1,15 @@
 Team 6 Time log
 
-Estimation:
+
+Project 3 Estimation:
 2.5 hr group meeting + 28 hr individual work = 30.5 hr total
 
-Estimation Explanation:
+
+Project 3 Estimation Explanation:
 Our group did a bit of researching before doing this project. Most of the videos are simple and straight forward. However, take into consideration that handwriting OCR requires machine leaning, we estimated that this project will take quite a bit of research. So we estimated that this project will take around the same amount of time as project 2.
 
-Actual Time Log
+
+Project 3 Actual Time Log:
 
 KL:
 3/17 -- 1 hr OCR research
@@ -37,7 +40,7 @@ AG:
 4/3 -- 1 hr implementing text display
 4/15 -- 1 hr adding \n trimming, fixing ui
 4/18 -- 1 hr adding Bulma
-Total: 4.5
+Total: 4.5 hr
 
 JD:
 3/17 -- 1 hr Researching tesseract.js
@@ -51,5 +54,42 @@ Total: 7 hr
 Group:
 3/17 -- 0.5 hr
 3/19 -- 0.5 hr
+Total: 1 hr
 
 TOTAL HOURS ==> 1 hr of team meetings + 37 hr individual hours
+
+
+
+
+
+
+Project 4 Estimation:
+1 hr group meeting + 26 hr individual work = 27 hr total
+
+
+Project 4 Estimation Explanation:
+Since we are just building on our last project we think there should not be that much group meetings, and we think the general time we will spent on this project should be a bit less than the last project as well. 
+
+
+Project 4 Actual Time Log:
+
+KL:
+4/24 -- 4hr code writing and documentation 
+4/25 -- 4hr documentation
+Total: 
+
+BL:
+Total: 
+
+AJ:
+Total: 
+
+AG:
+Total:
+
+JD:
+Total: 
+
+Group:
+
+TOTAL HOURS ==> X hr of team meetings + X hr individual hours
