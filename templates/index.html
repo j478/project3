@@ -15,6 +15,13 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
+    <div class="navbar">
+        <div class="navbar-menu">
+            <div class="navbar-end">
+                <button onclick="test()" class="button is-large m-2">Test</button>
+            </div>
+        </div>
+    </div>
     <section class="hero is-fullheight has-text-centered">
         <div class="hero-body">
             <div class="container">
@@ -91,5 +98,6 @@
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 	<script src="{{ url_for('static', filename='translate.js') }}"></script>
 	<script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="{{ url_for('static', filename='test.js') }}"></script>
 </body>
 </html>

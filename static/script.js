@@ -1,20 +1,29 @@
-let file = "";
+let file;
 let loading = document.getElementById('progress');
 let text_box = document.getElementById('text');
 loading.style.display = 'none';
 
 document.querySelector('#add_file').addEventListener('change', () => {
 	file = document.querySelector('#add_file').files[0];
-	document.querySelector('#image').src = URL.createObjectURL(file);
-	document.getElementById('file-name').innerText = file.name;
+	updatePic(file);
 });
 
+function updatePic(f) {
+    document.querySelector('#image').src = URL.createObjectURL(f);
+	document.getElementById('file-name').innerText = f.name;
+}
+
 document.querySelector('#submit').addEventListener('click', () => {
+    onSubmit()
+});
+
+function onSubmit() {
     text_box.style.display = 'none';
     loading.style.display = 'block';
 
 	let form_data = new FormData();
 	form_data.append("file", file);
+	console.log(file);
 
 	let xttp = new XMLHttpRequest();
 	xttp.onreadystatechange = function() {
@@ -25,7 +34,7 @@ document.querySelector('#submit').addEventListener('click', () => {
       };
 	xttp.open("POST", "/process");
 	xttp.send(form_data);
-});
+}
 
 function parseResponseJson(data) {
     if(data['error_msg'] === '') {
