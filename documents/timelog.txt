@@ -72,8 +72,9 @@ Since we are just building on our last project we think there should not be that
 Project 4 Actual Time Log:
 
 KL:
-4/24 -- 4hr code writing and documentation
-4/25 -- 4hr documentation
+4/22 -- 4 hr code writing and documentation
+4/23 -- 4 hr documentation
+4/24 -- 2 hr code writing and researching 
 Total:
 
 BL:
