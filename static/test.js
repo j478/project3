@@ -1,5 +1,8 @@
 let testFuncs = [testAddFile, testSubmitNoFile, testSubmitFile, testSubmitBadFile];
 
+/*
+ * Main test function. Runs all tests.
+ */
 function test() {
     console.log('TEST SUITE');
     for(let i=0; i < testFuncs.length; i++) {
@@ -15,6 +18,9 @@ function test() {
     }
 }
 
+/**
+ * Test adding a given image.
+ */
 function testAddFile() {
     let f_req = new XMLHttpRequest();
     f_req.responseType = 'arraybuffer';
@@ -29,16 +35,25 @@ function testAddFile() {
 	f_req.send();
 }
 
+/**
+ * Test submitting with no file attached to the request.
+ */
 function testSubmitNoFile() {
     file = null;
     onSubmit();
 }
 
+/**
+ * Test submitting with an example file attached.
+ */
 function testSubmitFile() {
     testAddFile();
     onSubmit();
 }
 
+/**
+ * Test submitting with a non-allowed filetype attached.
+ */
 function testSubmitBadFile() {
     let f_req = new XMLHttpRequest();
     f_req.responseType = 'arraybuffer';
