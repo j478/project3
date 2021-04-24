@@ -1,0 +1,31 @@
+DEFECT TEMPLATE
+Date reported:
+Who reported:
+Description:
+Date fixed:
+Who fixed:
+How fixed:
+---
+
+Date reported: 4/4
+Who reported: Becky
+Description: App can't load images from outside root directory
+Date fixed: 4/4
+Who fixed: Alex Gisi
+How fixed: Have files be uploaded to the server for processing
+
+Date reported: 4/4
+Who reported: Jake
+Description: App doesn't make both required dirs for upload
+Date fixed: 4/4
+Who fixed: Jake
+How fixed: Switch os.mkdir() to os.mkdirs()
+
+Date reported: 4/15
+Who reported: Alex Gisi
+Description: Returned text contains excessive newlines
+Date fixed: 4/15
+Who fixed: Alex Gisi
+How fixed: Regex search and replace for '/n'
+
+
