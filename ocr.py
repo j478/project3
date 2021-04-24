@@ -7,8 +7,9 @@ from fpdf import FPDF
 from googletrans import Translator
 
 TESSERACT_PATH = 'TESSDATA_PREFIX'
+tesseract_cmd = 'C:\Program Files\Tesseract-OCR\\tesseract.exe'
 
-def ocr(filename):
+def ocr(filename, language):
     """
     Get text from an image.
     :param filename: String, relative path of file in uploaded folder.
@@ -26,7 +27,7 @@ def ocr(filename):
         x, y, w, h = cv2.boundingRect(p)
         rect = cv2.rectangle(img, (x, y), (x + w, y + h), 0, 2)
         crop = img[y:y+h,x:x+w]
-        text = pytesseract.image_to_string(crop)
+        text = pytesseract.image_to_string(crop, lang = language)
     return trim_text(text)
 
 

@@ -54,7 +54,7 @@ Group:
 3/19 -- 0.5 hr
 Total: 1 hr
 
-TOTAL HOURS ==> 1 hr of team meetings + 37 hr individual hours
+TOTAL HOURS ==> 1 hr of group hours + 37 hr individual hours
 
 
 
@@ -72,8 +72,9 @@ Since we are just building on our last project we think there should not be that
 Project 4 Actual Time Log:
 
 KL:
-4/24 -- 4hr code writing and documentation
-4/25 -- 4hr documentation
+4/22 -- 4 hr code writing and documentation
+4/23 -- 4 hr documentation
+4/24 -- 2 hr code writing and researching 
 Total:
 
 BL:
@@ -94,4 +95,4 @@ Total:
 
 Group:
 
-TOTAL HOURS ==> X hr of team meetings + X hr individual hours
+TOTAL HOURS ==> X hr of group hours + X hr individual hours

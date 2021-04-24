@@ -14,3 +14,6 @@ https://stackabuse.com/pytesseract-simple-python-optical-character-recognition/
 Ajax:
 https://coderwall.com/p/cjinag/upload-a-image-using-ajax-and-formdata
 https://www.w3schools.com/xml/
+
+Tesseract Language Flags:
+https://github.com/tesseract-ocr/tesseract/blob/master/doc/tesseract.1.asc
