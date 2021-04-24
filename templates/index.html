@@ -27,20 +27,16 @@
                                 </div>
                                 <div class="hero-foot">
                                     <div class="file has-name is-centered">
-                                      <label class="file-label">
-                                        <input class="file-input" id="add_file" type="file" accept="image/*" />
-                                        <span class="file-cta">
-                                          <span class="file-icon">
-                                            <i class="fas fa-upload"></i>
-                                          </span>
-                                          <span class="file-label">
-                                            Choose a file…
-                                          </span>
-                                        </span>
-                                        <span id="file-name" class="file-name">
-                                          File name
-                                        </span>
-                                      </label>
+                                        <label class="file-label">
+                                            <input class="file-input" id="add_file" type="file" accept="image/*" />
+                                            <span class="file-cta">
+                                                <span class="file-icon">
+                                                    <i class="fas fa-upload"></i>
+                                                </span>
+                                                <span class="file-label">Choose a file…</span>
+                                            </span>
+                                            <span id="file-name" class="file-name">File name</span>
+                                        </label>
                                     </div>
                                 </div>
                             </section>
@@ -60,6 +56,26 @@
                                     </p>
                                     <progress id="progress" class="progress is-large is-info" max="100">60%</progress>
                                 </div>
+                                <div class="hero-foot">
+                                    <div class="level">
+                                        <div class="level-left">
+                                            <button id="translate" class="button level-item" > Translate</button>
+                                        </div>
+                                        <div class="level-right">
+                                            <label class="level-item" for="language">Choose a language:</label>
+                                            <div class="select level-item">
+                                                <select name="language" id="language">
+                                                    <option value="es">Spanish</option>
+                                                    <option value="fr">French</option>
+                                                    <option value="de">German</option>
+                                                    <option value="nl">Dutch</option>
+                                                    <option value="zh-TW">Chinese</option>
+                                                    <option value="is">Icelandic</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </section>
                         </div>
                     </div>
@@ -67,16 +83,6 @@
                 <div class="columns">
                     <div class="column">
                         <button id="submit" class="button is-large">Submit</button>
-						<button id="translate" class="button is-large" > Translate</button>
-			    		<label for="language">Choose a language:</label>
-						<select name="language" id="language">
-							<option value="es">Spanish</option>
-							<option value="fr">French</option>
-							<option value="de">German</option>
-							<option value="nl">Dutch</option>
-							<option value="zh-TW">Chinese</option>
-							<option value="is">Icelandic</option>
-						</select>
                     </div>
                 </div>
             </div>

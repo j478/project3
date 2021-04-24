@@ -25,7 +25,7 @@ def ocr(filename):
     for p in contours:
         x, y, w, h = cv2.boundingRect(p)
         rect = cv2.rectangle(img, (x, y), (x + w, y + h), 0, 2)
-        crop=img[y:y+h,x:x+w]
+        crop = img[y:y+h,x:x+w]
         text = pytesseract.image_to_string(crop)
     pdf(trim_text(text))
     return trim_text(text)
@@ -38,12 +38,19 @@ def trim_text(text):
 
     return text
 
+
 def pdf(text):
-    pdf=FPDF()
+    pdf = FPDF()
     pdf.add_page()
     pdf.set_font("Arial", size=12)
     pdf.multi_cell(0, 10, txt=text)
     pdf.output("text.pdf")
+
+
+def translate_text(t, d_lang):
+    translator = Translator()
+    trans = translator.translate(t, dest = d_lang)
+    return trans.text
 
 
 if __name__ == '__main__':
@@ -52,11 +59,6 @@ if __name__ == '__main__':
     print(ocr('sample.jpg'))
     print('Handwritten:')
     print(ocr('handwritten.jpg'))
-
-
-def translate_text(t, d_lang):
-    translator = Translator()
-    trans = translator.translate(t, dest = d_lang)
-    return(trans.text)
-
-print(translate_text("土豆和马铃薯", "en"))
+    print('Printed:')
+    print(ocr('printed.jpg'))
+    print(translate_text("土豆和马铃薯", "en"))
