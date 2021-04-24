@@ -54,7 +54,7 @@ Group:
 3/19 -- 0.5 hr
 Total: 1 hr
 
-TOTAL HOURS ==> 1 hr of team meetings + 37 hr individual hours
+TOTAL HOURS ==> 1 hr of group hours + 37 hr individual hours
 
 
 
@@ -95,4 +95,4 @@ Total:
 
 Group:
 
-TOTAL HOURS ==> X hr of team meetings + X hr individual hours
+TOTAL HOURS ==> X hr of group hours + X hr individual hours
