@@ -23,12 +23,10 @@ function onSubmit() {
 
 	let form_data = new FormData();
 	form_data.append("file", file);
-	console.log(file);
 
 	let xttp = new XMLHttpRequest();
 	xttp.onreadystatechange = function() {
         if (this.readyState === 4 && this.status === 200) {
-          console.log(this.response);
           parseResponseJson(JSON.parse(this.response));
         }
       };
