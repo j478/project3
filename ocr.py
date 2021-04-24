@@ -27,7 +27,6 @@ def ocr(filename):
         rect = cv2.rectangle(img, (x, y), (x + w, y + h), 0, 2)
         crop = img[y:y+h,x:x+w]
         text = pytesseract.image_to_string(crop)
-    pdf(trim_text(text))
     return trim_text(text)
 
 
@@ -49,16 +48,16 @@ def pdf(text):
 
 def translate_text(t, d_lang):
     translator = Translator()
-    trans = translator.translate(t, dest = d_lang)
+    trans = translator.translate(t, dest=d_lang)
     return trans.text
 
 
 if __name__ == '__main__':
-    os.chdir('samples/')
-    print("Sample:")
-    print(ocr('sample.jpg'))
-    print('Handwritten:')
-    print(ocr('handwritten.jpg'))
-    print('Printed:')
-    print(ocr('printed.jpg'))
+    # os.chdir('samples/')
+    # print("Sample:")
+    # print(ocr('sample.jpg'))
+    # print('Handwritten:')
+    # print(ocr('handwritten.jpg'))
+    # print('Printed:')
+    # print(ocr('printed.jpg'))
     print(translate_text("土豆和马铃薯", "en"))
