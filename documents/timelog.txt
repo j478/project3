@@ -82,6 +82,8 @@ Total:
 
 AJ:
 Total:
+4/19 -- 1 Hr researching pdf generation
+4/23 -- 3 Hr coding drop down menu, translate button
 
 AG:
 4/15 -- 1 hr adding \n trimming, fixing ui
