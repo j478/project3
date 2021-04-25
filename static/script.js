@@ -25,10 +25,11 @@ document.querySelector('#submit').addEventListener('click', () => {
     onSubmit()
 
 });
+
 /**
  * Handles making request to server. On callback, calls parseResponseJson to update displayed text.
  */
-function onSubmit() {
+async function onSubmit(callback) {
     text_box.style.display = 'none';
     loading.style.display = 'block';
 
@@ -39,6 +40,7 @@ function onSubmit() {
 	xttp.onreadystatechange = function() {
         if (this.readyState === 4 && this.status === 200) {
           parseResponseJson(JSON.parse(this.response));
+          if (callback) callback();
         }
       };
 	xttp.open("POST", "/process");
@@ -72,9 +74,13 @@ function updateText(text) {
  * Listen for user click on translate button.
  */
 document.querySelector('#translate').addEventListener('click', () => {
-	let language = document.querySelector('#language');
+	translate()
+});
+
+function translate() {
+    let language = document.querySelector('#language');
 	let text=text_box.innerText;
 	settings.data.target=language.value;
 	settings.data.q=text;
 	request();
-});
+}
