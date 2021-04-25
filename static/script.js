@@ -2,6 +2,7 @@ let file;
 let loading = document.getElementById('progress');
 let text_box = document.getElementById('text');
 loading.style.display = 'none';
+let formattedText = "";
 
 /**
  * Listen for when a file is attached using the add file button.
@@ -22,8 +23,8 @@ function updatePic(f) {
 
 document.querySelector('#submit').addEventListener('click', () => {
     onSubmit()
-});
 
+});
 /**
  * Handles making request to server. On callback, calls parseResponseJson to update displayed text.
  */
@@ -64,14 +65,16 @@ function updateText(text) {
     text_box.innerText = text;
     text_box.style.display = 'block';
     loading.style.display = 'none';
+	//format(text);
 }
 
 /**
  * Listen for user click on translate button.
  */
 document.querySelector('#translate').addEventListener('click', () => {
-	let language = document.getElementbyId(language);
-	let text=text_box.value;
+	let language = document.querySelector('#language');
+	let text=text_box.innerText;
 	settings.data.target=language.value;
 	settings.data.q=text;
+	request();
 });

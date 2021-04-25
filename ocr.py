@@ -4,12 +4,12 @@ import numpy as np
 import os
 import re
 from fpdf import FPDF
-from googletrans import Translator
+#from googletrans import Translator
 
 TESSERACT_PATH = 'TESSDATA_PREFIX'
 tesseract_cmd = 'C:\Program Files\Tesseract-OCR\\tesseract.exe'
 
-def ocr(filename, language):
+def ocr(filename):
     """
     Get text from an image.
     :param filename: String, relative path of file in uploaded folder.
@@ -27,7 +27,7 @@ def ocr(filename, language):
         x, y, w, h = cv2.boundingRect(p)
         rect = cv2.rectangle(img, (x, y), (x + w, y + h), 0, 2)
         crop = img[y:y+h,x:x+w]
-        text = pytesseract.image_to_string(crop, lang = language)
+        text = pytesseract.image_to_string(crop)
     return trim_text(text)
 
 
@@ -47,13 +47,13 @@ def pdf(text):
     pdf.output("text.pdf")
 
 
-def translate_text(t, d_lang):
-    translator = Translator()
-    trans = translator.translate(t, dest=d_lang)
-    return trans.text
+#def translate_text(t, d_lang):
+    #translator = Translator()
+   # trans = translator.translate(t, dest=d_lang)
+   # return trans.text
 
 
-if __name__ == '__main__':
+#if __name__ == '__main__':
     # os.chdir('samples/')
     # print("Sample:")
     # print(ocr('sample.jpg'))
@@ -61,4 +61,3 @@ if __name__ == '__main__':
     # print(ocr('handwritten.jpg'))
     # print('Printed:')
     # print(ocr('printed.jpg'))
-    print(translate_text("土豆和马铃薯", "en"))
