@@ -79,6 +79,9 @@ Total:
 
 BL:
 Total:
+4/22 - 1.5 hr PDF generation
+4/23 - 1 hr documentation
+4/24 - 1 hr documentation
 
 AJ:
 Total:
