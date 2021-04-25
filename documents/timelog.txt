@@ -93,6 +93,9 @@ AG:
 Total:
 
 JD:
+4/16 -- 1 hr setting up access to google translate api
+4/18 -- 1 hr debugging front end setup for translate
+4/20 -- 1 hr researching "send to pdf" functionality
 Total:
 
 Group:
