@@ -10,11 +10,11 @@ let settings = {
   "method": "POST",
   "headers": {
     "x-rapidapi-host": "google-translate1.p.rapidapi.com",
-    "x-rapidapi-key": "26f0b80993msh6d0b26a82ebdee9p170cf9jsn8cb726e71210",
+    "x-rapidapi-key": "1c3ebbef39msh27276bee1b01d59p157aaajsn3fb54cc9e59e",
     "content-type": "application/x-www-form-urlencoded"
   },
   "data": {
-    "source": "en",
+    "source": "",
     "q": "Hello, World!",
     "target": "es"
   }
@@ -22,7 +22,9 @@ let settings = {
 }
 
 let request = () => {
-	$.ajax(settings).done((response) => {
+	/*$.ajax(settings).done((response) => {
 		console.log(response);
-	});
+		text_box.innerText = response.data.translations[0].translatedText;
+	});*/
+	text_box.innerText = "This is where the translated text would be. reminder to un-comment the ajax request before 11:59";
 }
