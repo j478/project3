@@ -78,3 +78,18 @@ document.querySelector('#translate').addEventListener('click', () => {
 	settings.data.q=text;
 	request();
 });
+
+document.querySelector('#PDF').addEventListener('click', () => {
+	let form_data = new FormData();
+	form_data.append("text", text_box.innerText);
+	
+	let xttp = new XMLHttpRequest();
+	xttp.onreadystatechange = function() {
+        if (this.readyState === 4 && this.status === 200) {
+          console.log(this.response);
+        }
+      };
+	xttp.open("POST", "/pdf");
+	xttp.send(form_data);
+	
+});

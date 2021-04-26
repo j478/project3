@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, jsonify
-from ocr import ocr
+from ocr import ocr, pdf
 from werkzeug.utils import secure_filename
 import os
 
@@ -46,7 +46,13 @@ def process_image():
                        error_msg="File was not an image file/wrong filetype.",
                        img_text="")
 
-
+@app.route('/pdf', methods=['POST'])
+def makePDF():
+    if request.form['text']:
+        pdf(request.form['text'])
+        return jsonify(success=True, error_msg="")
+    else:
+        return jsonify(success=False, error_msg="")
 def upload(file):
     """
     Upload file to server.
