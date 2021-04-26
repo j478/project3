@@ -33,6 +33,11 @@ def ocr(filename, language):
 
 
 def trim_text(text):
+    """
+    Gets rid of excessive newlines.
+    :param text: String, text obtain from image.
+    :return: String
+    """
     text = re.sub('\n +', '', text)
     text = re.sub('\n+', '\n', text)
     print(text)
@@ -41,6 +46,11 @@ def trim_text(text):
 
 
 def pdf(text):
+    """
+    Generates PDF.
+    :param text: String, text obtain from image.
+    :return: String
+    """
     pdf = FPDF()
     pdf.add_page()
     pdf.set_font("Arial", size=12)
