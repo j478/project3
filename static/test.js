@@ -1,7 +1,9 @@
-let testFuncs = [testAddFile, testSubmitNoFile, testSubmitFile, testSubmitBadFile];
+let testFuncs = [testAddFile, testSubmitNoFile, testSubmitFile,
+    testSubmitBadFile, testTranslate];
 
-/*
- * Main test function. Runs all tests.
+/**
+ * Main test function. Runs all tests. Requires 'preserve log'
+ * in console settings to view results.
  */
 function test() {
     console.log('TEST SUITE');
@@ -14,7 +16,6 @@ function test() {
             console.log('(' + i + ')' + test.name + ': FAIL');
             console.log(e);
         }
-        location.reload();
     }
 }
 
@@ -66,4 +67,10 @@ function testSubmitBadFile() {
       };
 	f_req.open("GET", "/static/img/test/bad.txt");
 	f_req.send();
+}
+
+function testTranslate() {
+    testAddFile();
+    testSubmitFile();
+    translate();
 }
