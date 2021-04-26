@@ -28,4 +28,9 @@ Date fixed: 4/15
 Who fixed: Alex Gisi
 How fixed: Regex search and replace for '/n'
 
-
+Date reported: 4/25
+Who reported: Jake Davies
+Description: fpdf not recognizing unicode characters
+Date fixed: ...
+Who fixed: ...
+How fixed: ...
