@@ -22,9 +22,8 @@ let settings = {
 };
 
 let request = () => {
-	/*$.ajax(settings).done((response) => {
+	$.ajax(settings).done((response) => {
 		console.log(response);
 		text_box.innerText = response.data.translations[0].translatedText;
-	});*/
-	text_box.innerText = "This is where the translated text would be. reminder to un-comment the ajax request before 11:59";
+	});
 };
