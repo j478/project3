@@ -3,6 +3,7 @@ let loading = document.getElementById('progress');
 let text_box = document.getElementById('text');
 loading.style.display = 'none';
 let formattedText = "";
+//let lang = document.querySelector('#file_lang');
 
 /**
  * Listen for when a file is attached using the add file button.
@@ -35,6 +36,7 @@ async function onSubmit(callback) {
 
 	let form_data = new FormData();
 	form_data.append("file", file);
+	//form_data.append("lang",lang.value);
 
 	let xttp = new XMLHttpRequest();
 	xttp.onreadystatechange = function() {
@@ -84,6 +86,9 @@ function translate() {
 	request();
 };
 
+/**
+ * Listen for user click on pdf button. sends text to pdf file
+ */
 document.querySelector('#PDF').addEventListener('click', () => {
 	let form_data = new FormData();
 	form_data.append("text", text_box.innerText);

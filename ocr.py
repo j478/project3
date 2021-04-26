@@ -9,7 +9,7 @@ from fpdf import FPDF
 TESSERACT_PATH = 'TESSDATA_PREFIX'
 tesseract_cmd = 'C:\Program Files\Tesseract-OCR\\tesseract.exe'
 
-def ocr(filename):
+def ocr(filename, language):
     """
     Get text from an image.
     :param filename: String, relative path of file in uploaded folder.
@@ -21,13 +21,14 @@ def ocr(filename):
     kernel = np.ones((5, 5), np.uint8)
     opening = cv2.morphologyEx(thresh, cv2.MORPH_OPEN, kernel)
     contours, _git = cv2.findContours(opening, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
+    print(language)
 
     text = ""
     for p in contours:
         x, y, w, h = cv2.boundingRect(p)
         rect = cv2.rectangle(img, (x, y), (x + w, y + h), 0, 2)
         crop = img[y:y+h,x:x+w]
-        text = pytesseract.image_to_string(crop)
+        text = pytesseract.image_to_string(crop, lang=language)
     return trim_text(text)
 
 
@@ -53,11 +54,11 @@ def pdf(text):
    # return trans.text
 
 
-#if __name__ == '__main__':
-    # os.chdir('samples/')
-    # print("Sample:")
-    # print(ocr('sample.jpg'))
-    # print('Handwritten:')
-    # print(ocr('handwritten.jpg'))
-    # print('Printed:')
-    # print(ocr('printed.jpg'))
+if __name__ == '__main__':
+     #os.chdir('samples/')
+     #print("Sample:")
+     #print(ocr('sample.jpg'))
+     #print('Handwritten:')
+     #print(ocr('handwritten.jpg'))
+     #print('Printed:')
+     print(ocr('printed.jpg'))

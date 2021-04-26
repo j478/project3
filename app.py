@@ -36,7 +36,11 @@ def process_image():
     file = request.files['file']
     if file_good(file):
         path = upload(file)
-        img_text = ocr(path)
+        if 'lang' in request.form:
+            language = request.form['lang']
+        else:
+            language = 'eng'
+        img_text = ocr(path, language)
 
         return jsonify(success=True,
                        error_msg="",
