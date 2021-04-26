@@ -105,6 +105,6 @@ JD:
 Total: 6 hr
 
 Group:
-Total: 33 hr
+Total: 0 hr
 
-TOTAL HOURS ==> 0 hr of group hours + X hr individual hours
+TOTAL HOURS ==> 0 hr of group hours + 33 hr individual hours
