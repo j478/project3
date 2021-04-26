@@ -87,7 +87,7 @@ Total: 5 hr
 AJ:
 4/19 -- 1 Hr researching pdf generation
 4/23 -- 3 Hr coding drop down menu, translate button
-Total:
+Total: 4 hr
 
 AG:
 4/15 -- 1 hr adding \n trimming, fixing ui
@@ -105,6 +105,6 @@ JD:
 Total: 6 hr
 
 Group:
-Total: 0
+Total: 33 hr
 
 TOTAL HOURS ==> 0 hr of group hours + X hr individual hours
